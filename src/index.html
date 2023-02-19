@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CDN play -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- <link rel="stylesheet" href="./styles/output.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Work+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>exam</title>
+  </head>
+  <body>
+    <header class="border-b">
+      <div class="container max-w-[1240px] mx-auto ">
+        <div class="flex justify-between">
+          <div class="nav flex justify-start items-center pt-[27px] pb-[27px]">
+            <a href="#" class="pr-5"><img class="" src="./images/main_logo.svg" alt="" /></a>
+              <ul class="hover:bg-gray-200 hover:text-black rounded-full duration-200 p-4">
+                <li><a href="">Categories</a></li>
+              </ul>
+            <ul class="flex inner__wrap relative  justify-between p-4 hover:bg-gray-200 hover:text-black rounded-full duration-200">
+              <a class="" href="#">About Us</a><i class='bx bx-chevron-down'></i>
+               <ul class="dropdown hidden absolute z-20 w-[147px] bg-white p-[10px] duration-200 backdrop-blur-md  rounded-[20px] dark:drop-shadow-sm">
+                <li class="h-[58px] text-[18px]  leading-[22px] font-medium flex items-center py-[18px] px-4 dark:hover:bg-gray-300 hover:rounded-xl duration-200">
+                  <a href="#" class="w-full h-full">News</a>
+                </li> 
+                <li class="h-[58px] text-[18px]  leading-[22px] font-medium flex items-center py-[18px] px-4 dark:hover:bg-gray-300 hover:rounded-xl duration-200">
+                  <a href="#" class="w-full h-full">Careers</a>
+                </li> 
+                <li class="h-[58px] text-[18px]  leading-[22px] font-medium flex items-center py-[18px] px-4 dark:hover:bg-gray-300 hover:rounded-xl duration-200">
+                  <a href="#" class="w-full h-full">Locations</a>
+                </li> 
+              </ul>
+            </ul>
+            <ul class="flex inner__wrap relative justify-between p-4 hover:bg-gray-200 hover:text-black rounded-full duration-200">
+              <a class="" href="#">Help center</a><i class='bx bx-chevron-down'></i>
+               <ul class="dropdown hidden absolute z-20 w-[160px] bg-white p-[10px] duration-200 backdrop-blur-md  rounded-[20px] dark:drop-shadow-sm">
+                <li class="h-[58px] text-[18px]  leading-[22px] font-medium flex items-center py-[18px] px-4 dark:hover:bg-gray-300 hover:rounded-xl duration-300">
+                  <a href="#" class="w-full h-full">FAQ</a>
+                </li> 
+                <li class="h-[58px] text-[18px]  leading-[22px] font-medium flex items-center py-[18px] px-4 dark:hover:bg-gray-300 hover:rounded-xl duration-300">
+                  <a href="#" class="w-full h-full">Contact Us</a>
+                </li> 
+              </ul>
+            </ul>
+          </div>
+          <div class="flex justify-start items-center">
+            <p class="pr-[24px] font-bold">+1 855 420 000</p>
+            <input type="checkbox" id="them"/>
+            <button id="" class="btn-login login__btn flex justify-evenly text-[18px]  leading-[22px] items-center w-[142px] h-[58px] ml-4 p-4 rounded-full text-white ">
+              Login
+              <img class="" src="./images/login_icon_white.svg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="login hidden z-[100] px-4 absolute w-screen h-screen top-0 left-0 justify-center items-center">
+        <div class="bg-white login__inner rounded-[20px] w-[358px] sm:w-[590px] h-[483px] px-4 py-10 sm:px-8 relative">
+          <form action="#" class="form flex flex-col justify-center items-center">
+            <h1 class="font-semibold text-[36px] leading-[44px]">Login</h1>
+            <p class="font-normal text-[16px] leading-[24px] text-[#555555] mt-[10px]">
+              Use the email and password that you login
+            </p>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              class="focus:ring-2  focus:ring-sky-400 font-medium text-[18px] leading-[22px] w-full h-[58px] py-[18px] px-[30px] rounded-[82px] mt-8 outline-none border border-spacing-[1.5px] border-[#E5E7EA]"
+            />
+            <div class="w-full mt-4 relative">
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                class="focus:ring-2  focus:ring-sky-400 font-medium text-[18px] leading-[22px] w-full h-[58px] py-[18px] px-[30px] rounded-[82px] outline-none border border-spacing-[1.5px] border-[#E5E7EA]"
+              />
+              <i class="bx icon-eye bxs-show absolute text-lg right-[23px] top-[20px] cursor-pointer "
+              ></i>
+            </div>
+            <div class="text-end w-full flex justify-between">
+              <p class="font-normal hidden text-[14px] leading-[17px] text-[#FF3B30] mt-[10px]"
+              >Entered the wrong password
+              </p>
+              <a href="#" class="text-end flex-grow">
+                <p class="font-normal text-[14px] leading-[17px] text-[#555555]  mt-[10px]"
+                >Forgot password</p>
+              </a>
+            </div>
+            <a href="#">
+              <h3 class="font-medium text-[16px] leading-[20px] mt-[26px]">I want to create an account</h3>
+            </a>
+            <button
+              type="submit"
+              class=" mt-8 group btn bg-[#299764] cursor-pointer w-full h-[58px] rounded-full hover:bg-[#077743] flex justify-center items-center ml-4">
+              <h1 class=" text-white inline-block text-[18px] leading-[22px] font-medium"
+              >Login</h1>
+              <img
+                src="./images/login_icon_white.svg"
+                alt="exit-icon"
+                class="ml-[11px]"
+              />
+            </button>
+          </form>
+          <div
+            class="form_exit   hover:bg-slate-200 absolute top-[24px] right-[24px] w-[58px] h-[58px]  duration-300 cursor-pointer rounded-full flex justify-center items-center"
+          >
+            <i class="bx bx-x"></i>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </header>
+    <section class="slider">
+        <div class="container mx-auto max-w-[1240px] ">
+          <div class="relative">
+            <div class="slider__wrapper">
+              <div class="swiper mySwiper z-10 mt-5 rounded-2xl overflow-hidden">
+                <div class="swiper-wrapper">
+                </div>
+                <div class="w-[84px] hidden absolute bottom-10 right-10 z-10 sm:flex items-center justify-between">
+                  <div class="w-9 h-9 swiper__left rounded-full z-10 bg-white hover:bg-[#cbcaca] cursor-pointer flex items-center justify-center">
+                    <i class="bx bx-chevron-left text-xl text-black"></i>
+                  </div>
+                  <div class="w-9 h-9 swiper__right rounded-full z-10 bg-white hover:bg-[#cbcaca] cursor-pointer flex items-center justify-center">
+                    <i class="bx bx-chevron-right text-xl text-black"></i>
+                  </div>
+                </div>
+                <div class="pagin flex justify-start items-start w-full sm:w-[100px] mx-auto sm:absolute left-10 bottom-[46px]">
+                  <!-- dinamic pagin elements -->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute block left-0 -bottom-[60px] sm:-bottom-[30px] z-50 w-full"
+            >
+              <div class="max-w-[600px] bg-white rounded-full mx-auto">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="search"
+                    placeholder="Find the car of your dreams"
+                    class="focus:ring-2 dark:placeholder:text-[#555555] bg-transparent flex-grow text-[#000] focus:ring-[#299764] h-[66px] font-medium text-[18px] shadow-[0px_4px_10px_rgba(0,0,0,0.15)] leading-[22px] w-full py-[18px] px-[30px] rounded-full outline-none"
+                  />
+                  <div
+                    class="icon w-[58px] hover:bg-[#077743] flex items-center justify-center text-2xl text-white cursor-pointer h-[58px] absolute top-1 right-1 rounded-full bg-[#299764]"
+                  >
+                    <i class="bx bx-search-alt-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="cards">
+      <div class="container mx-auto max-w-[1200px] p-5">
+        <div class="wrap__info">
+            <h2 class="wrap__title text-[36px] pt-[133px] leading-[44px] text-center font-bold">Choose the car of your dreams</h2>
+            <p class="wrap__text mt-[10px] text-[16px] leading-[24px] w-[568px] text-center text-[#555555] mx-auto">
+              We provide our customers with the most incredible driving emotions.
+              That is why there are only world-class cars in our fleet
+            </p>
+            </div>
+            <div class="filter__buttons flex gap-4 justify-center items-center">
+              <button class="fill_btn filter__buttons-active mt-8 group bg-transparent py-[14px] md:py-[19px] text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-medium px-5 md:px-10 rounded-full hover:bg-[#f5f5f5]  flex justify-center items-center border border-spacing-[1.5px] border-[#E5E7EA]">
+                Compact</button>
+              <button class="fill_btn mt-8 group bg-transparent py-[14px] md:py-[19px] text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-medium px-5 md:px-10 rounded-full hover:bg-[#f5f5f5]  flex justify-center items-center border border-spacing-[1.5px] border-[#E5E7EA]">
+                Sports cars</button>
+              <button class="fill_btn mt-8 group bg-transparent py-[14px] md:py-[19px] text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-medium px-5 md:px-10 rounded-full hover:bg-[#f5f5f5]  flex justify-center items-center border border-spacing-[1.5px] border-[#E5E7EA]">
+                Vans</button>    
+            </div>          
+        <ul class="wrapper__cards car_cards flex flex-wrap mt-6 mb-10 gap-5 ">
+        </ul>
+        
+        <div class="flex justify-center items-center  w-full mb-[160px] mt-[40px]">
+          <button class="all-btn filter__buttons-active hover:bg-[#f5f5f5]  px-[46px] py-[19px] mr-4 rounded-full border ">View all cars</button> 
+        </div>
+        </div>
+    </section>
+
+     <section class="comments bg-[#EEEEEE] py-5 sm:py-[100px] ">
+        <div class="container mx-auto max-w-[1240px] px-5">
+          <div class="comment__wrapper h-auto xl:h-[479px] rounded-[20px] flex sm:block xl:flex flex-wrap sm:flex-nowrap overflow-hidden">
+            <div class="bg-white w-full xl:w-[470px]  p-6 sm:p-[30px] xl:p-[70px]">
+              <div class="block sm:flex justify-between items-center xl:block">
+                <div>
+                  <div class="flex">
+                    <img src="./images/google_min.svg" alt="google" />
+                    <a href="https://www.google.com/" class="ml-2 text-[#4285F4] font-medium text-4 left-5"
+                      >From Google</a>
+                  </div>
+                  <p class="mt-4 font-medium text-[38px] leading-[50px] sm:text-[24px] sm:leading-[36px] xl:text-[38px] xl:leading-[50px] w-[306px]">
+                    Hear what the community is saying
+                  </p>
+                </div>
+                <div
+                  class="kamalak w-[318px] sm:w-[108px] xl:w-[330px] my-[30px] h-[2px] sm:rotate-90 xl:rotate-180"
+                ></div>
+                <div>
+                  <p
+                    class="mt-4 font-medium text-[14px] leading-[17px] text-[#555555] dark:text-[#fff]"
+                  >
+                    More interesting reviews on Instagram
+                  </p>
+                  <div
+                    class="group btn-insta p-[2px] cursor-pointer rounded-full mt-4 inline-block"
+                  >
+                    <div
+                      class="group-hover:bg-transparent group-hover:text-white bg-white py-[17px] px-[59px] rounded-full inline-block"
+                    >
+                      <h1
+                        class="font-insta font-medium text-[18px leading-[22px]"
+                      >
+                        <a href="https://www.instagram.com/" target="_blank">Instagram</a> 
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-[730px] sm:w-full xl:w-[730px] sm:h-[459px] xl:h-auto h-auto bg-[#299764] relative pl-4 pb-4 sm:pb-0 sm:pl-6 xl:pl-10 overflow-hidden border-l-2 border-[#299764]"
+            >
+              <ul class="comment_list mt-5 sm:mt-[50px] flex gap-5 duration-500">
+                <li class="comment__item h-[380px] w-[326px] sm:w-[420px] sm:h-[333px] rounded-2xl bg-white  p-6">
+                  <div class="flex justify-between items-center">
+                    <div class="flex">
+                      <img src="./images/user_avatar.png" alt="ava" />
+                      <div class="ml-4">
+                        <h1 class="font-semibold text-[14px] leading-[17px] sm:text-4 sm:leading-5">Ronald Richards</h1>
+                        <h2 class="font-normal sm:text-[14px] text-[12px] leading-[15px]  sm:leading-[17px] text-[#555555]">
+                        ronaldrichards@gmail.com
+                        </h2>
+                      </div>
+                    </div>
+                    <img src="./images/google.svg" alt="" class="" />
+                  </div>
+                  <p
+                    class="w-[294px] sm:w-[372px] h-[220px] sm:h-[160px] font-normal text-[14px] left-[20px] mt-[14px]"
+                  >
+                  Placerat pulvinar in amet sem id gravida nisi leo. A dignissim est pellentesque mi quisque vel mi ut. Porttitor blandit auctor odio a ornare felis tortor bibendum molestie. 
+                  </p>
+                  <div class="mt-[25px] h-[1.5px] bg-[#E5E7EA]"></div>
+                  <div class="flex items-center mt-[14px]">
+                    <h4
+                      class="font-medium text-[14px] inline-block left-[17px]"
+                    >
+                      Star rating:
+                    </h4>
+                    <img
+                      src="/src/images/5_star.svg"
+                      alt="stars"
+                      class="ml-[17px]"
+                    />
+                  </div>
+                </li>
+
+                <li class="comment__item h-[380px] w-[326px] sm:w-[420px] sm:h-[333px] rounded-2xl bg-white  p-6">
+                  <div class="flex justify-between items-center">
+                    <div class="flex">
+                      <img src="./images/user_avater_2.png" alt="ava" />
+                      <div class="ml-4">
+                        <h1 class="font-semibold text-[14px] leading-[17px] sm:text-4 sm:leading-5">Savannah Nguyen</h1>
+                        <h2 class="font-normal sm:text-[14px] text-[12px] leading-[15px]  sm:leading-[17px] text-[#555555]">
+                        savannahnguyen@gmail.com
+                        </h2>
+                      </div>
+                    </div>
+                    <img src="./images/google.svg" alt="" class="" />
+                  </div>
+                  <p
+                    class="w-[294px] sm:w-[372px] h-[220px] sm:h-[160px] font-normal text-[14px] left-[20px] mt-[14px]"
+                  >Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa. </p>
+                  <div class="mt-[25px] h-[1.5px] bg-[#E5E7EA]"></div>
+                  <div class="flex items-center mt-[14px]">
+                    <h4
+                      class="font-medium text-[14px] inline-block left-[17px]"
+                    >
+                      Star rating:
+                    </h4>
+                    <img
+                      src="/src/images/4.5_star.svg"
+                      alt="stars"
+                      class="ml-[17px]"
+                    />
+                  </div>
+                </li>
+                
+              </ul>
+              <div
+                class="w-[84px] hidden absolute bottom-10 right-10 z-10 sm:flex items-center justify-between"
+              >
+                <div
+                  class="w-9 h-9 slider__left rounded-full z-10 bg-white cursor-pointer flex items-center justify-center"
+                >
+                  <i class="bx bx-chevron-left text-xl text-black"></i>
+                </div>
+                <div
+                  class="w-9 h-9 slider__right rounded-full z-10 bg-white  cursor-pointer flex items-center justify-center"
+                >
+                  <i class="bx bx-chevron-right text-xl text-black"></i>
+                </div>
+              </div>
+              <div class="scrollbar sm:ml-10 flex mt-[37px]">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="brand">
+      <div class="container mx-auto">
+        <div class="">
+          <h4 class="mt-[160px]  text-[24px] leading-[29px] mb-[34px]">More than 50 brands of cars</h4>
+            <div class="brands flex justify-between mb-[160px]">
+              <img src="./images/ford_light.svg" alt="">
+              <img src="./images/nissan_ligth.svg" alt="">
+              <img src="./images/toyota_ligth.svg" alt="">
+              <img src="./images/dodge_ligth.svg" alt="">
+              <img src="./images/hyundai_ligth.svg" alt="">
+              <img src="./images/jeep_ligth.svg" alt="">
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="container mx-auto w-full">
+        <div class="">
+          <div class="flex justify-center items-center">
+          <div class="items-center">
+            <p class="text-[36px] leading-[44px] text-center font-bold">Unparalleled service</p>
+            <p class="mt-[10px] mb-[40px] text-[16px] leading-[24px] max-w-[684px] text-center text-gray-600">Whether you are looking for Newark Airport car rental, an insurance replacement vehicle or minivan to take on vacation Car rental has it all.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-5 justify-between flex-wrap mb-[160px]">
+
+          <div class="card duration-200 w-[590px] h-[216px] rounded-2xl">
+            <div class="pt-[40px] flex justify-between px-8 items-center">
+              <div>
+              <p class="text-[32px] leading-[39px] w-[255px] text-start font-bold">Book online, pay online</p>
+              </div>
+              <div>
+              <img class="max-w-[51px]"   src="./images/tv_default.svg" alt="">
+                </div>
+              </div>
+              <p class="pt-[10px] pl-8 pb-[40px] text-[16px] leading-[24px] w-[390px] text-start ">Complete the booking process A-Z, with our easy online system</p>
+          </div>
+
+          <div class="card duration-200 w-[590px] h-[216px] rounded-2xl">
+            <div class="pt-[40px] flex justify-between px-8 items-center">
+              <div>
+              <p class="text-[32px] leading-[39px] w-[288px] text-start font-bold">Guaranteed car reservation</p>
+              </div>
+              <div>
+              <img class="max-w-[51px]"   src="./images/guard_icon.svg" alt="">
+                </div>
+              </div>
+              <p class="pt-[10px] pl-8 pb-[40px] text-[16px] leading-[24px] w-[390px] text-start ">When you book with Car rental, you can be confident your car will be waiting for you  </p>
+          </div>
+
+          <div class="card  duration-200 w-[590px] h-[216px] rounded-2xl">
+            <div class="pt-[40px] flex justify-between px-8 items-center">
+              <div>
+              <p class="text-[32px] leading-[39px] w-[288px] text-start font-bold">Unparalleled customer service</p>
+              </div>
+              <div>
+              <img class="max-w-[51px]"   src="./images/person_time_default.svg" alt="">
+                </div>
+              </div>
+              <p class="pt-[10px] pl-8 pb-[40px] text-[16px] leading-[24px] w-[390px] text-start ">We're here to help. We pride ourselves in our customer service</p>
+          </div>
+
+          <div class="card duration-200 w-[590px] h-[216px] rounded-2xl">
+            <div class="pt-[40px] flex justify-between px-8 items-center">
+              <div>
+              <p class="text-[32px] leading-[39px] w-[288px] text-start font-bold">No reservation or booking fees</p>
+              </div>
+              <div>
+              <img class="max-w-[51px]"   src="./images/wallet_icon.svg" alt="">
+                </div>
+              </div>
+              <p class="pt-[10px] pl-8 pb-[40px] text-[16px] leading-[24px] w-[390px] text-start ">No cancellation fees if cancelled 24 hours prior to booking time</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="safety">
+      <div class="container mx-auto">
+      <div class="relative w-[1200px] h-[500px] mb-[160px] flex justify-start rounded-3xl border border-gray-300 border-spacing-1">
+            <div class="px-10 py-8">
+          <div class="flex justify-start items-center ">
+          <div class="items-center gap-[10px]">
+            <p class="text-[36px] leading-[44px] text-start font-bold pb-[10px]">Car rental keeps you safe</p>
+            <p class="text-[16px] pb-[94px] leading-[24px] max-w-[684px] text-start text-gray-600">The safety of our employees and renters is our number one priority. In addition to being confident your vehicle is cleaned and sanitized every time you rent, you can also feel confident that we will take every opportunity to enhance the health and safety measures currently practiced in our operations.</p>
+        </div>
+        </div>
+            
+        <div class="flex flex-row gap-3">
+            <div class="card duration-200 flex flex-wrap justify-end w-[200px] rounded-xl h-[160px]">
+              <div class="p-6 pl-[120px]">
+              <img src="./images/drug_default.svg" alt="">
+            </div>
+            <p class="pl-[15px] text-[16px] leading-[22px]">Every car is thoroughly sanitized and cleaned</p>
+            </div>
+
+            <div class="card duration-200 flex flex-wrap justify-end w-[200px] rounded-xl h-[160px]">
+              <div class="p-6 pl-[120px]">
+              <img src="./images/heart_default.svg" alt="">
+            </div>
+            <p class="pl-[15px] text-[16px] leading-[22px]">All of our employees wear masks</p>
+            </div>
+
+            <div class="card duration-200 flex flex-wrap justify-end w-[200px] rounded-xl h-[160px]">
+              <div class="p-6 pl-[120px]">
+              <img src="./images/package_default.svg" alt="">
+            </div>
+
+            <p class="pl-[15px] text-[16px] leading-[22px]">We stay up to date with all protocol from the CDC</p>
+            </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="circle absolute w-[300px] h-[300px] rounded-full m-[30px]">
+            </div>
+            <img class="absolute mt-[49px]" src="./images/man-with_wheel.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer border-t-[1.5px] border-[#E5E7EA]">
+      <div class="container mx-auto max-w-[1240px]">
+        <div class="footer__wrapper px-5 pt-10 flex flex-col xl:flex-row">
+          <div class="flex xl:flex-col flex-row justify-between xl:justify-start items-start">
+            <div class="logo_footer">
+              <a href="index.html#"> <img src="./images/main_logo.svg" alt="logo" /></a>
+              <p class="text-xs leading-5  mt-5 w-60">
+                Car rental offers a wide range of cars available for rent in
+                Newark EWR Airport NJ. We pride ourselves in our customer
+                service, and hassle-free renting experience.
+              </p>
+            </div>
+            <p class="w-[166px] font-medium text-base mt-[84px]">
+              © 2022 Car rental Terms & Conditions.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap">
+              <div class="flex flex-wrap sm:justify-between xl:justify-start gap-10 xl:gap-5 xl:ml-[65px] mt-6 pb-10 border-b-[1.5px] border-[#E5E7EA] w-full">
+                <div>
+                  <h1 class="font-medium text-base leading-5 mb-1">Main</h1>
+                  <ul>
+                    <li>
+                      <a href="#" class="anker__dec font-medium block text-[14px] w-[154px] mt-3 leading-[17px]  hover:underline"
+                    >My Bookings</a></li>
+                    <li><a
+                    href="#"
+                    class="anker__dec font-medium block text-[14px] w-[154px] mt-3 leading-[17px]  hover:underline"
+                    >Reservation</a></li>
+                  </ul>
+                  
+                </div>
+                <div class="ml-[49px] sm:ml-0 xl:ml-[49px]">
+                  <h1 class="font-medium text-base leading-5 mb-1">
+                    Categories
+                  </h1>
+                  <a
+                    href="#"
+                    class="anker__dec font-medium block text-[14px] w-[104px] mt-3 leading-[17px] hover:underline"
+                    >Compact</a
+                  >
+                  <a
+                    href="#"
+                    class="anker__dec font-medium block text-[14px] w-[104px] mt-3 leading-[17px] hover:underline"
+                    >Sports cars</a
+                  >
+                  <a
+                    href="#"
+                    class="anker__dec font-medium block text-[14px] w-[104px] mt-3 leading-[17px] hover:underline"
+                    >Vans
+                  </a>
+                </div>
+                <div class="xl:ml-[52px]">
+                  <h1 class="font-medium text-base leading-5 mb-1">Company</h1>
+                  <a
+                    href="#"
+                    class="anker__dec font-medium block text-[14px] mt-3 leading-[17px] hover:underline"
+                    >About us</a
+                  >
+                  <a
+                    href="#"
+                    class="anker__dec font-medium  block text-[14px] mt-3 leading-[17px] hover:underline"
+                    >Careers</a
+                  >
+                  <a
+                    href="#"
+                    class="font-medium block text-[14px] mt-3 leading-[17px] hover:underline"
+                    >News
+                  </a>
+                  <a
+                    href="#"
+                    class="anker__dec font-medium block text-[14px] mt-3 leading-[17px] hover:underline"
+                    >Contact us
+                  </a>
+                </div>
+                <div class="ml-[50px] sm:ml-0 xl:ml-[124px]">
+                  <h1 class="font-medium text-base leading-5 mb-1">
+                    Our Locations
+                  </h1>
+                  <a href="#" class="anker__dec font-medium block text-[14px] mt-3 leading-[17px] hover:underline"
+                    >2118 Thornridge Cir. Syracuse</a>
+                  <a href="#" class="anker__dec font-medium block text-[14px] mt-3 leading-[17px] hover:underline"
+                    >4140 Parker Rd. Allentown</a>
+                  <a href="#" class="anker__dec font-medium block text-[14px] mt-3 leading-[17px] hover:underline"
+                    >4517 Washington Ave.</a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-wrap gap-10 xl:gap-5 xl:ml-[65px] mt-10 pb-10 relative"
+            >
+              <div>
+                <h1 class="font-medium text-base leading-5 mb-1">Contact</h1>
+                <a
+                  href="#"
+                  class="anker__dec font-medium block text-[14px] w-[154px] mt-3 leading-[17px] hover:underline"
+                  >+1 855 420 0000</a
+                >
+                <a
+                  href="#"
+                  class="anker__dec font-medium block text-[14px] w-[154px] mt-3 leading-[17px] hover:underline"
+                  >carrental@gmail.com</a
+                >
+              </div>
+              <div class="ml-[49px]">
+                <h1 class="font-medium text-base leading-5 mb-1">
+                  Hours of operation
+                </h1>
+                <a
+                  href="#"
+                  class="anker__dec font-medium block text-[14px] w-[154px] mt-3 leading-[17px] hover:underline"
+                  >8:00 - 21:00 Mon-Sat
+                </a>
+                <a
+                  href="#"
+                  class="anker__dec font-medium block text-[14px] w-[154px] mt-3 leading-[17px] hover:underline"
+                  >9:00 - 15:00 Sundays</a
+                >
+              </div>
+              <div class="xl:ml-[52px]">
+                <h1 class="font-medium text-base leading-5 mb-[22px]">
+                  Social network
+                </h1>
+                <div class="flex gap-[15px]">
+                  <a
+                    href="https://www.instagram.com/" target="_blank"
+                    class="logo_insta duration-300 group w-10 flex justify-center items-center h-10 rounded-full bg-black dark:bg-white"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 1.80723C12.6506 1.80723 13.0121 1.80723 14.0964 1.80723C15.0602 1.80723 15.5422 2.04819 15.9036 2.16868C16.3855 2.40964 16.747 2.53012 17.1084 2.89157C17.4699 3.25301 17.7108 3.61446 17.8313 4.09639C17.9518 4.45783 18.0723 4.93976 18.1928 5.90362C18.1928 6.98795 18.1928 7.22892 18.1928 10C18.1928 12.7711 18.1928 13.0121 18.1928 14.0964C18.1928 15.0602 17.9518 15.5422 17.8313 15.9036C17.5904 16.3855 17.4699 16.747 17.1084 17.1084C16.747 17.4699 16.3855 17.7108 15.9036 17.8313C15.5422 17.9518 15.0602 18.0723 14.0964 18.1928C13.0121 18.1928 12.7711 18.1928 10 18.1928C7.22892 18.1928 6.98795 18.1928 5.90362 18.1928C4.93976 18.1928 4.45783 17.9518 4.09639 17.8313C3.61446 17.5904 3.25301 17.4699 2.89157 17.1084C2.53012 16.747 2.28916 16.3855 2.16868 15.9036C2.04819 15.5422 1.92771 15.0602 1.80723 14.0964C1.80723 13.0121 1.80723 12.7711 1.80723 10C1.80723 7.22892 1.80723 6.98795 1.80723 5.90362C1.80723 4.93976 2.04819 4.45783 2.16868 4.09639C2.40964 3.61446 2.53012 3.25301 2.89157 2.89157C3.25301 2.53012 3.61446 2.28916 4.09639 2.16868C4.45783 2.04819 4.93976 1.92771 5.90362 1.80723C6.98795 1.80723 7.3494 1.80723 10 1.80723ZM10 0C7.22892 0 6.98795 0 5.90362 0C4.81928 0 4.09639 0.240965 3.49398 0.481928C2.89157 0.722892 2.28916 1.08434 1.68675 1.68675C1.08434 2.28916 0.843374 2.77109 0.481928 3.49398C0.240965 4.09639 0.120482 4.81928 0 5.90362C0 6.98795 0 7.3494 0 10C0 12.7711 0 13.0121 0 14.0964C0 15.1807 0.240965 15.9036 0.481928 16.506C0.722892 17.1084 1.08434 17.7108 1.68675 18.3133C2.28916 18.9157 2.77109 19.1566 3.49398 19.5181C4.09639 19.759 4.81928 19.8795 5.90362 20C6.98795 20 7.3494 20 10 20C12.6506 20 13.0121 20 14.0964 20C15.1807 20 15.9036 19.759 16.506 19.5181C17.1084 19.2771 17.7108 18.9157 18.3133 18.3133C18.9157 17.7108 19.1566 17.2289 19.5181 16.506C19.759 15.9036 19.8795 15.1807 20 14.0964C20 13.0121 20 12.6506 20 10C20 7.3494 20 6.98795 20 5.90362C20 4.81928 19.759 4.09639 19.5181 3.49398C19.2771 2.89157 18.9157 2.28916 18.3133 1.68675C17.7108 1.08434 17.2289 0.843374 16.506 0.481928C15.9036 0.240965 15.1807 0.120482 14.0964 0C13.0121 0 12.7711 0 10 0Z"
+                        fill="white"
+                        class="dark:fill-black group-hover:fill-white duration-300"
+                      />
+                      <path
+                        d="M10 4.81928C7.10843 4.81928 4.81928 7.10843 4.81928 10C4.81928 12.8916 7.10843 15.1807 10 15.1807C12.8916 15.1807 15.1807 12.8916 15.1807 10C15.1807 7.10843 12.8916 4.81928 10 4.81928ZM10 13.3735C8.19277 13.3735 6.62651 11.9277 6.62651 10C6.62651 8.19277 8.07229 6.62651 10 6.62651C11.8072 6.62651 13.3735 8.07229 13.3735 10C13.3735 11.8072 11.8072 13.3735 10 13.3735Z"
+                        fill="white"
+                        class="dark:fill-black group-hover:fill-white duration-300"
+                      />
+                      <path
+                        d="M15.3012 5.90362C15.9666 5.90362 16.506 5.3642 16.506 4.6988C16.506 4.03339 15.9666 3.49398 15.3012 3.49398C14.6358 3.49398 14.0964 4.03339 14.0964 4.6988C14.0964 5.3642 14.6358 5.90362 15.3012 5.90362Z"
+                        fill="white"
+                        class="dark:fill-black group-hover:fill-white duration-300"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.twitter.com/" target="_blank"
+                    class="hover:bg-[#55ACE3] duration-300 group w-10 flex justify-center items-center h-10 rounded-full bg-black dark:bg-white"
+                  >
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.6 1.89999C18.9 2.19999 18.1 2.4 17.3 2.5C18.1 2 18.8 1.2 19.1 0.300003C18.3 0.800003 17.5 1.1 16.5 1.3C15.8 0.500003 14.7 0 13.6 0C11.4 0 9.59999 1.8 9.59999 4C9.59999 4.3 9.6 4.59999 9.7 4.89999C6.4 4.69999 3.39999 3.1 1.39999 0.699997C1.09999 1.3 0.899994 2 0.899994 2.7C0.899994 4.1 1.6 5.3 2.7 6C2 6 1.39999 5.8 0.899994 5.5C0.899994 7.4 2.29999 9.09999 4.09999 9.39999C3.79999 9.49999 3.4 9.5 3 9.5C2.7 9.5 2.5 9.49999 2.2 9.39999C2.7 11 4.2 12.2 6 12.2C4.6 13.3 2.9 13.9 1 13.9C0.7 13.9 0.4 13.9 0 13.8C1.8 14.9 3.9 15.6 6.2 15.6C13.6 15.6 17.6 9.5 17.6 4.2V3.7C18.4 3.4 19.1 2.69999 19.6 1.89999Z"
+                        fill="white"
+                        class="dark:fill-black group-hover:fill-white duration-300"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/" target="_blank"
+                    class="hover:bg-[#0B84EE] duration-300 group w-10 flex justify-center items-center h-10 rounded-full bg-black dark:bg-white"
+                  >
+                    <svg
+                      width="12"
+                      height="23"
+                      viewBox="0 0 12 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.65708 12.3648H11.3793L11.9637 8.56055H7.65632V6.48134C7.65632 4.90099 8.16957 3.49962 9.63891 3.49962H12V0.179741C11.5852 0.123382 10.7078 0 9.04996 0C5.58819 0 3.55867 1.8393 3.55867 6.0297V8.56055H0V12.3648H3.55867V22.821C4.26344 22.9276 4.97729 23 5.71007 23C6.37245 23 7.01893 22.9391 7.65708 22.8522V12.3648Z"
+                        fill="white"
+                        class="dark:fill-black group-hover:fill-white duration-300"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.whatsapp.com/" target="_blank"
+                    class="hover:bg-[#48C95F] duration-300 group w-10 flex justify-center items-center h-10 rounded-full bg-black dark:bg-white"
+                  >
+                    <svg
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.9268 3.0625C15.9512 1.09375 13.3171 0 10.5366 0C4.7561 0 0.0731696 4.66667 0.0731696 10.4271C0.0731696 12.25 0.585366 14.0729 1.46341 15.6042L0 21L5.56098 19.5417C7.09756 20.3438 8.78049 20.7812 10.5366 20.7812C16.3171 20.7812 21 16.1146 21 10.3542C20.9268 7.65625 19.9024 5.03125 17.9268 3.0625ZM15.5854 14.1458C15.3659 14.7292 14.3415 15.3125 13.8293 15.3854C13.3902 15.4583 12.8049 15.4583 12.2195 15.3125C11.8537 15.1667 11.3415 15.0208 10.7561 14.7292C8.12195 13.6354 6.43903 11.0104 6.29268 10.7917C6.14634 10.6458 5.19512 9.40625 5.19512 8.09375C5.19512 6.78125 5.85366 6.19792 6.07317 5.90625C6.29268 5.61458 6.58536 5.61458 6.80488 5.61458C6.95122 5.61458 7.17073 5.61458 7.31707 5.61458C7.46341 5.61458 7.68293 5.54167 7.90244 6.05208C8.12195 6.5625 8.63414 7.875 8.70731 7.94792C8.78049 8.09375 8.78049 8.23958 8.70731 8.38542C8.63414 8.53125 8.56097 8.67708 8.41463 8.82292C8.26829 8.96875 8.12195 9.1875 8.04878 9.26042C7.90244 9.40625 7.7561 9.55208 7.90244 9.77083C8.04878 10.0625 8.56097 10.8646 9.36585 11.5937C10.3902 12.4687 11.1951 12.7604 11.4878 12.9063C11.7805 13.0521 11.9268 12.9792 12.0732 12.8333C12.2195 12.6875 12.7317 12.1042 12.878 11.8125C13.0244 11.5208 13.2439 11.5938 13.4634 11.6667C13.6829 11.7396 15 12.3958 15.2195 12.5417C15.5122 12.6875 15.6585 12.7604 15.7317 12.8333C15.8049 13.0521 15.8049 13.5625 15.5854 14.1458Z"
+                        fill="white"
+                        class="dark:fill-black group-hover:fill-white duration-300"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="w-[70px] h-[70px] absolute group cursor-pointer duration-300 active:bg-[#F5F5F5] rounded-full hover:bg-[#077743] bg-[#299764] bottom-10 right-0 flex justify-center items-center"
+                id="myBtn"
+              >
+                <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="mx-auto"
+                >
+                  <path d="M2.37379 7.04044C1.98327 7.43097 1.3501 7.43097 0.95958 7.04044C0.569056 6.64992 0.569056 6.01675 0.95958 5.62623L6.29291 0.292893C6.68344 -0.0976311 7.3166 -0.0976311 7.70713 0.292893L13.0405 5.62623C13.431 6.01675 13.431 6.64992 13.0405 7.04044C12.6499 7.43097 12.0168 7.43097 11.6262 7.04044L8.00002 3.41421L8.00002 16.3333C8.00002 16.8856 7.5523 17.3333 7.00002 17.3333C6.44773 17.3333 6.00002 16.8856 6.00002 16.3333L6.00002 3.41421L2.37379 7.04044Z"
+                    fill="white" class="group-active:fill-black"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+  <script src="./js/carousel.js"></script>
+  <script src="./utils.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper__right",
+        prevEl: ".swiper__left",
+      },
+
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
+      // mousewheel: {
+      //   invert: true,
+      // },
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+      },
+    });
+  </script>
+</html>
